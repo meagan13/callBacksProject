@@ -21,8 +21,26 @@ myForEach(['laika', 'belka'], function (el) {
 console.log(test); // ['LAIKA', 'BELKA']
 *******************************************************************************/
 
-let myForEach = function() {
+/*Write a function `myForEach` that accepts an array and a callback as arguments.
+The function should call the callback on each element of the array, passing in the
+element, index, and array itself. The function does not need to return any value.*/
 
+//Understand
+//  Accepts array, call back as aruguments
+//  On each element of the array, use a call back function
+//  No need to return anything
+//Plan
+//  Initialize an answer array
+//  For loop
+//  For every element, use a call back function on the element
+//  Push each element into answer array
+//  Return answer array
+
+let myForEach = function(array, callback) {
+
+    for(let i = 0; i < array.length; i++) {
+        callback(array[i]);
+    }
 };
 
 
