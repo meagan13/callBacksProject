@@ -56,8 +56,5 @@ let add5 = function(n) {
     return n + 5;
 };
 
-console.log(chainMap(25, add5));                // 30
-
-
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
 module.exports = chainMap;

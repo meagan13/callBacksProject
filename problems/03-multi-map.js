@@ -45,7 +45,7 @@ let multiMap = function(value,number,callback) {
 let result3 = multiMap("hi", 5, function(s) {
   return s + "!";
 });
-console.log(result3); // hi!!!!!
+
 
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
