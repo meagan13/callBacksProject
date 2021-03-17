@@ -30,15 +30,12 @@ element, index, and array itself. The function does not need to return any value
 //  On each element of the array, use a call back function
 //  No need to return anything
 //Plan
-//  Initialize an answer array
-//  For loop
-//  For every element, use a call back function on the element
-//  Push each element into answer array
-//  Return answer array
+
 
 let myForEach = function(array, callback) {
-
+    //  For loop
     for(let i = 0; i < array.length; i++) {
+    //  For every element, use a call back function on the element
         callback(array[i]);
     }
 };

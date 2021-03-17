@@ -20,8 +20,20 @@ let result3 = multiMap("hi", 5, function(s) {
 });
 console.log(result3); // hi!!!!!
 *******************************************************************************/
+//Understand
+  //accept value, number, and callback function
+  //Apply the callback to the value 'number' of times
+  //Return new value
+//Plan
+  // Add value, number, and callback as parameters
+  // Create a for loop that involves n
+    // Invoke callback
+    // return value
+let multiMap = function(value,number,callback) {
+    for (let i = 0; i < number; i++) {
+      callback (value)
+    }
 
-let multiMap = function() {
 
 };
 

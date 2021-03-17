@@ -24,20 +24,23 @@ each element of the array, passing in the element.*/
 //  On each element of the array, use a call back function
 //  Return
 //Plan
-//  Initialize an answer array
-//  For loop
-//  For every element, use a call back function on the element
-//  Push each element into answer array
-//  Return answer array
+
+
+
+
+
 
 let myMap = function(array, callback) {
+    //  Initialize an answer array
     let answerArray = [];
-
+    //  For loop
     for(let i = 0; i < array.length; i++) {
+        //  For every element, use a call back function on the element
         let curPos = callback(array[i]);
-
+        //  Push each element into answer array
         answerArray.push(curPos);
     }
+    //  Return answer array
     return answerArray;
 };
 
