@@ -45,8 +45,8 @@ all of the given callbacks. In other words, if three callbacks are given then:
 let chainMap = function(value, ...callbacks) {
     let newVal = value;
 
-    callbacks.forEach(function(cb) {            //array of functions
-        newVal = cb(newVal);
+    callbacks.forEach(function(cb) {            //array of functions, name the function current 'cb'
+        newVal = cb(newVal);                    //newVal variable reassigned to the returned value after invoking the current element callback
 });
     return newVal;
 };
