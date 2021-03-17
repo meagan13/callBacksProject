@@ -17,15 +17,23 @@ mapMutator(arr2, function (el, i) {
 });
 console.log(arr2); // [ 0, 9, 20 ]
 *******************************************************************************/
-
-let mapMutator = function() {
-
+//Understand
+//Accept an array and a callback
+// Replace each element in the original array with its callback function value at that element
+// Return original array
+//Plan
+// Add parameters
+// Loop over array argument
+// Invoke callback on currEl and index
+// Current index value gets reassigned to callback value of currEl
+// Return array
+let mapMutator = function(array, callback) {
+    for (let i = 0; i < array.length; i++) {
+        let currEl = array[i];
+        array[i] = callback(currEl,i)
+    }
+    return array;
 };
-
-
-
-
-
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
 module.exports = mapMutator;
