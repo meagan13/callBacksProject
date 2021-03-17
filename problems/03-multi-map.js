@@ -29,15 +29,23 @@ console.log(result3); // hi!!!!!
   // Create a for loop that involves n
     // Invoke callback
     // return value
+
+
+
 let multiMap = function(value,number,callback) {
-    for (let i = 0; i < number; i++) {
-      callback (value)
-    }
+  let newVal = value;
 
-
+  for (let i = 0; i < number; i++) {
+    //console.log(newVal);
+    newVal = callback(newVal);
+  }
+  return newVal;
 };
 
-
+let result3 = multiMap("hi", 5, function(s) {
+  return s + "!";
+});
+console.log(result3); // hi!!!!!
 
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
