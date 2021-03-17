@@ -27,15 +27,36 @@ console.log(chainMap(25, add5, half));          // 15
 console.log(chainMap(25, add5, half, square));  // 225
 console.log(chainMap(4, square, half));         // 8
 console.log(chainMap(4, half, square));         // 4
+
+Write a function `chainMap` that accepts a value and any number of callbacks as
+arguments. The function should return the final result of passing the value through
+all of the given callbacks. In other words, if three callbacks are given then:
 *******************************************************************************/
+//Understand
+//  Accepts value, multiple callbacks
+//  Pass the value through all given callbacks
+//  Return result value
+//Plan
+//  Add number, callback1, ...otherCallbacks
+//  Create newVal = value
+//  Pass newVal through all callbacks
+//  Return newVal
 
-let chainMap = function() {
+let chainMap = function(value, ...callbacks) {
+    let newVal = value;
 
+    callbacks.forEach(function(cb) {            //array of functions
+        newVal = cb(newVal);
+});
+    return newVal;
 };
 
 
+let add5 = function(n) {
+    return n + 5;
+};
 
-
+console.log(chainMap(25, add5));                // 30
 
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
