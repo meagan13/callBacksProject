@@ -22,9 +22,32 @@ let result3 = mySome(['soup', 'noodles', 'bike', 'ship'], function(ele) {
 });
 console.log(result3);   // true
 *******************************************************************************/
+/*Write a function `mySome` that accepts an array and a callback as an argument.
+The function should call the callback for each element of the array, passing in
+the element and its index. The function should return a boolean
+indicating whether or not at least one element of the array returns true when passed
+into the callback.*/
 
-let mySome = function() {
+//Understand
+    //Accept two parameters: array and callback
+    //Invoke callback for every element and its index
+    //If element is true, return true, else return false
+//Plan
+    //Add parameters
+    //Loop over the array argument
+        //Invoke callback for each element and its index
+        // If true, return true
+    // return false
 
+let mySome = function(array,callback) {
+    let answer = false
+    for (let i = 0; i < array.length; i++) {
+        let currEl = array[i];
+        if (callback(currEl,i)) {
+            answer = true;
+        }
+    }
+    return answer;
 };
 
 
