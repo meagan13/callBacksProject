@@ -7,19 +7,28 @@ result in true, then the function should return -1.
 Understand:
     Function accepts an array and a callback
     Pass the elements through the callback - find first that results true
-    Return the index of the array element that results true
+    Return the index of the first array element that results true
+    If no elements are true, return -1
 
 Plan:
-    Callback
+    Loop over the array
+    Invoke the callback for every element
+    If the result is true, return the index of that element
+
 
 *******************************************************************************/
 
 let firstIndex = function(array, callback) {
 
-    return array.forEach(function(el){
-        callback(el);
-    });
+    for(let i = 0; i < array.length; i++) {
+        let currentEl = array[i];
 
+        if(callback(currentEl) === true) {      //if invoking the callback on the currentEl returns true,
+            return i;                           //return the index of currentEl
+        }
+    }
+
+    return -1;                                  //otherwise, return -1
 };
 
 
