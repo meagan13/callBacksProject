@@ -26,6 +26,11 @@ let result4 = none([4, -5, 7, -1], function(n) {
     return n < 0;
 });
 console.log(result4);   // false
+
+Understand:
+    Accept an array and a callback
+    Call the callback for each element of the array
+    If all elements passed through the call back are false, return true
 *******************************************************************************/
 
 let none = function() {
