@@ -16,10 +16,30 @@ let squarer = function (n) {
 console.log(greaterCallbackValue(5, doubler, squarer));     // 25
 console.log(greaterCallbackValue(1, doubler, squarer));     // 2
 console.log(greaterCallbackValue(9, Math.sqrt, doubler));   // 18
+
+Write a function `greaterCallbackValue` that accepts a value and two callbacks
+as arguments. The function should pass the value to both callbacks and return the
+result of the callback that is greater.
+
+Understand:
+    Accepts a value and two callbacks
+    Pass the value through both callbacks
+    Return the result that is greater
+Plan:
+    Create variables for invoking the callbacks
+    If var1 is greater than var2, return var1
+    Else, return var2
 *******************************************************************************/
 
-let greaterCallbackValue = function() {
+let greaterCallbackValue = function(value, cb1, cb2) {
+   let result1 = cb1(value);
+   let result2 = cb2(value);
 
+   if(result1 > result2) {
+       return result1;
+   } else {
+       return result2;
+   }
 };
 
 
