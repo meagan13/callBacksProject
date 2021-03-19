@@ -4,8 +4,18 @@ function should call the callback for each element of the array, passing in the
 element and its index. The function should return a boolean indicating whether
 or not exactly one element of the array results in true when passed into the callback.
 
-Examples:
+Understand
+    Function accepts an array and a callback
+    Apply the callback on each element of the array using element AND index
+    Return a boolean - does exactly one result as true
+Plan
 
+*/
+
+
+let one = function() {
+
+};
 let result1 = one(['x', 'y', 'z'], function(el) {
     return el === 'a';
 });
@@ -35,16 +45,6 @@ let result6 = one(['apple', 'dog', 'food', 'cat'], function(el, idx) {
     return el.length === idx;
 });
 console.log(result6);   // true
-*******************************************************************************/
-
-let one = function() {
-
-};
-
-
-
-
-
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
 module.exports = one;
